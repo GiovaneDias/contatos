@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'editar',
+    loadChildren: () => import('./editar/editar.module').then( m => m.EditarPageModule)
+  },
+  {
+    path: 'incluir',
+    loadChildren: () => import('./incluir/incluir.module').then( m => m.IncluirPageModule)
+  },
+  {
+    path: 'remover',
+    loadChildren: () => import('./remover/remover.module').then( m => m.RemoverPageModule)
+  },
 ];
 
 @NgModule({
